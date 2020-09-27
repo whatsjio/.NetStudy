@@ -37,6 +37,7 @@ namespace StreamTesttwo
             Console.ReadLine();
         }
 
+
         private static async Task WriterAsync() {
             try
             {
