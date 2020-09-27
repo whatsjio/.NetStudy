@@ -31,8 +31,8 @@ namespace StreamTesttwo
             //Test.WatchFiles(@"D:\APTest", @"*.txt");
 
             //Console.ReadKey();
-            Task.Run(() => WriterAsync());
-            Task.Run(() => Reader());
+            Task.Run(() => WriterUsingStreams());
+            Task.Run(() => ReaderUsingStreams());
             Console.WriteLine("tasks started");
             Console.ReadLine();
         }
@@ -91,7 +91,7 @@ namespace StreamTesttwo
 
         }
 
-        private async Task WriterUsingStreams() {
+        private static async Task WriterUsingStreams() {
             try
             {
                 using (MemoryMappedFile mappedFile=MemoryMappedFile.CreateOrOpen(MAPNAME,10000,MemoryMappedFileAccess.ReadWrite))
@@ -120,7 +120,7 @@ namespace StreamTesttwo
             }
         }
 
-        private async Task ReaderUsingStreams() {
+        private static async Task ReaderUsingStreams() {
             try
             {
                 WriteLine("reader");
