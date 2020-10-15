@@ -15,6 +15,7 @@ namespace 管道测试
     {
         static void Main(string[] args)
         {
+            PipesReader("yohayou");
             ReadKey();
         }
 
