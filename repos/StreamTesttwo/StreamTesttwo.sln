@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "管道测试发送端", "�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "匿名管道", "匿名管道\匿名管道.csproj", "{6B3BAC8A-4AFF-457A-9C55-8CFD600099BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{A4441927-83FE-41D6-A22A-43E4BE027BF1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{6B3BAC8A-4AFF-457A-9C55-8CFD600099BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B3BAC8A-4AFF-457A-9C55-8CFD600099BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B3BAC8A-4AFF-457A-9C55-8CFD600099BA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A4441927-83FE-41D6-A22A-43E4BE027BF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A4441927-83FE-41D6-A22A-43E4BE027BF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A4441927-83FE-41D6-A22A-43E4BE027BF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A4441927-83FE-41D6-A22A-43E4BE027BF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
