@@ -30,6 +30,7 @@ namespace 网络
                     WriteLine();
                     WriteLine(responseBodyAsText);
                 
+
                 }
 
             }
