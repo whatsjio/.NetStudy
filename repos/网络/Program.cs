@@ -15,7 +15,8 @@ namespace 网络
         static async Task Main(string[] args)
         {
             //await GetDataWithHeadersAsync();
-            await GetDataWithMessageHandlerAsync();
+            //await GetDataWithMessageHandlerAsync();
+            await OnSendRequest();
             ReadKey();
         }
 
@@ -103,6 +104,29 @@ namespace 网络
                 
                 HttpResponseMessage respon = await client.SendAsync(resquest);
             }
+        }
+
+        private static async Task OnSendRequest() {
+            try
+            {
+                using (var client=new HttpClient())
+                {
+                    var resuest = new HttpRequestMessage(HttpMethod.Get, "https://http2.akamai.com/demo");
+                    HttpResponseMessage response = await client.SendAsync(resuest);
+                    var Version = response.Version.ToString();
+                    Console.WriteLine(Version);
+                    response.EnsureSuccessStatusCode();
+                    var result = await response.Content.ReadAsStringAsync();
+
+                }
+            }
+            catch (Exception)
+            {
+
+                
+            }
+        
+        
         }
 
     }
