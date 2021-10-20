@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -16,8 +17,21 @@ namespace 网络
         {
             //await GetDataWithHeadersAsync();
             //await GetDataWithMessageHandlerAsync();
-            await OnSendRequest();
-            ReadKey();
+            //await OnSendRequest();
+            //ReadKey();
+            do
+            {
+                WriteLine("输入hostname");
+                string hostname = ReadLine();
+                if (hostname.ToUpper() == "BYE") {
+                    WriteLine("Bye!");
+                    return;
+                }
+                await OnLookupAsync(hostname);
+                WriteLine();
+            } while (true);
+
+
         }
 
         private async Task GetDataSimpleAsync() {
@@ -128,6 +142,43 @@ namespace 网络
         
         
         }
+
+        public static void IpaddressSamlpe(string ipaddressstring) {
+            IPAddress address;
+            if (!IPAddress.TryParse(ipaddressstring, out IPAddress address1)) {
+                WriteLine($"不能转换ip地址{ipaddressstring}");
+                return;
+            }
+            byte[] bytes = address1.GetAddressBytes();
+            for (int i = 0; i < bytes.Length; i++)
+            {
+                WriteLine($"byte{i}:{bytes[i]:X}");
+            }
+            WriteLine($"family:{address1.AddressFamily},map to ipv6:{address1.MapToIPv6()},map to ipv4 {address1.MapToIPv4()}");
+            
+        }
+
+        public static async Task OnLookupAsync(string hostname) {
+            try
+            {
+                IPHostEntry ipHost = await Dns.GetHostEntryAsync(hostname);
+                WriteLine($"Hostname:{ipHost.HostName}");
+                foreach (var item in ipHost.AddressList)
+                {
+                    WriteLine($"Address Family:{item.AddressFamily}");
+                    WriteLine($"Address:{item}");
+                }
+            }
+            catch (Exception ex) 
+            {
+                WriteLine(ex.Message);
+            }
+        
+
+        
+        }
+
+
 
     }
 }
