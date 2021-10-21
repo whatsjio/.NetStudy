@@ -9,7 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPAndUDPExample", "..\TCPA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPLIstener", "..\TCPLIstener\TCPLIstener.csproj", "{8BB87236-CD00-42FD-8441-8317AF5E45AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDPtest", "..\UDPtest\UDPtest.csproj", "{7D02D760-F8ED-44CD-B979-CA792D47A710}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDPSender", "..\UDPtest\UDPSender.csproj", "{7D02D760-F8ED-44CD-B979-CA792D47A710}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdpReserver", "..\UdpReserver\UdpReserver.csproj", "{DF506948-CCEF-4E40-A2A7-3170CA1934C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{7D02D760-F8ED-44CD-B979-CA792D47A710}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D02D760-F8ED-44CD-B979-CA792D47A710}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D02D760-F8ED-44CD-B979-CA792D47A710}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF506948-CCEF-4E40-A2A7-3170CA1934C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF506948-CCEF-4E40-A2A7-3170CA1934C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF506948-CCEF-4E40-A2A7-3170CA1934C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF506948-CCEF-4E40-A2A7-3170CA1934C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
