@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30428.66
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "网络", "网络.csproj", "{ED5AC8A1-4391-4B82-8413-365A2427F5AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPAndUDPExample", "..\TCPAndUDPExample\TCPAndUDPExample.csproj", "{6AAC0E8F-3B62-4EB6-90B2-5D908E666A3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPLIstener", "..\TCPLIstener\TCPLIstener.csproj", "{8BB87236-CD00-42FD-8441-8317AF5E45AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDPSender", "..\UDPtest\UDPSender.csproj", "{7D02D760-F8ED-44CD-B979-CA792D47A710}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdpReserver", "..\UdpReserver\UdpReserver.csproj", "{DF506948-CCEF-4E40-A2A7-3170CA1934C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "套接字", "..\套接字\套接字.csproj", "{F86DAF20-DE32-4D0B-8345-4DFAD8E96719}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "套接字接收器", "..\套接字接收器\套接字接收器.csproj", "{AC430BB5-A4DD-4A3B-89FF-9F9F7F3E70D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED5AC8A1-4391-4B82-8413-365A2427F5AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED5AC8A1-4391-4B82-8413-365A2427F5AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED5AC8A1-4391-4B82-8413-365A2427F5AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED5AC8A1-4391-4B82-8413-365A2427F5AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AAC0E8F-3B62-4EB6-90B2-5D908E666A3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AAC0E8F-3B62-4EB6-90B2-5D908E666A3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AAC0E8F-3B62-4EB6-90B2-5D908E666A3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AAC0E8F-3B62-4EB6-90B2-5D908E666A3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BB87236-CD00-42FD-8441-8317AF5E45AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BB87236-CD00-42FD-8441-8317AF5E45AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BB87236-CD00-42FD-8441-8317AF5E45AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BB87236-CD00-42FD-8441-8317AF5E45AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D02D760-F8ED-44CD-B979-CA792D47A710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D02D760-F8ED-44CD-B979-CA792D47A710}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D02D760-F8ED-44CD-B979-CA792D47A710}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D02D760-F8ED-44CD-B979-CA792D47A710}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF506948-CCEF-4E40-A2A7-3170CA1934C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF506948-CCEF-4E40-A2A7-3170CA1934C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF506948-CCEF-4E40-A2A7-3170CA1934C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF506948-CCEF-4E40-A2A7-3170CA1934C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F86DAF20-DE32-4D0B-8345-4DFAD8E96719}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F86DAF20-DE32-4D0B-8345-4DFAD8E96719}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F86DAF20-DE32-4D0B-8345-4DFAD8E96719}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F86DAF20-DE32-4D0B-8345-4DFAD8E96719}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC430BB5-A4DD-4A3B-89FF-9F9F7F3E70D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC430BB5-A4DD-4A3B-89FF-9F9F7F3E70D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC430BB5-A4DD-4A3B-89FF-9F9F7F3E70D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC430BB5-A4DD-4A3B-89FF-9F9F7F3E70D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A9C6C957-1B96-4911-B2ED-5DBD51D51693}
+	EndGlobalSection
+EndGlobal
