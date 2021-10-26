@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -93,5 +94,78 @@ namespace 套接字
         
         
         }
+
+
+        /// <summary>
+        /// 用网络流替代套接字
+        /// </summary>
+        /// <param name="socket"></param>
+        /// <returns></returns>
+        private static async Task CommunicateWithClientUsingNetWorkStreamAsync(Socket socket) {
+            try
+            {
+                //设置是否拥有套接字
+                using (var stream=new NetworkStream(socket,ownsSocket:true))
+                {
+                    bool completed = false;
+                    do
+                    {
+                        byte[] readBuffer = new byte[1024];
+                        int read = await stream.ReadAsync(readBuffer, 0, 1024);
+                        string formClient = Encoding.UTF8.GetString(readBuffer, 0, read);
+                        WriteLine($"读取{read}流{formClient}");
+                        if (string.Compare(formClient, "bye", ignoreCase: true) == 0)
+                        {
+                            completed = true;
+                        }
+                        byte[] writeBuffer = Encoding.UTF8.GetBytes($"收到 {formClient}");
+                        await stream.WriteAsync(writeBuffer, 0, writeBuffer.Length);
+                    } while (!completed);
+
+                }
+                WriteLine("关闭流和客户端连接");
+            }
+            catch (Exception ex)
+            {
+                WriteLine(ex.Message);
+            }
+        
+        }
+
+        /// <summary>
+        /// 用读写器代替网络流
+        /// </summary>
+        /// <param name="socket"></param>
+        /// <returns></returns>
+        private static async Task CommunicateWithClientUsingReadersAndWritersAsync(Socket socket)
+        {
+            try
+            {
+                using (var stream=new NetworkStream(socket, ownsSocket: true))
+                using (var reader=new StreamReader(stream,Encoding.UTF8,false,8192,leaveOpen:true))
+                using (var writer = new StreamWriter(stream, Encoding.UTF8, 8192, leaveOpen:true))
+                {
+                    writer.AutoFlush = true;
+                    bool completed = false;
+                    do
+                    {
+                        string formClient = await reader.ReadLineAsync();
+                        WriteLine($"读取{formClient}");
+                        if (string.Compare(formClient, "bye", ignoreCase: true) == 0)
+                        {
+                            completed = true;
+                        }
+                        await writer.WriteLineAsync($"收到 {formClient}");
+                    } while (!completed);
+                }
+                WriteLine("关闭流和客户端连接");
+            }
+            catch (Exception ex)
+            {
+                WriteLine(ex.Message);
+            }
+
+        }
+
     }
 }
