@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdpReserver", "..\UdpReserv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "套接字", "..\套接字\套接字.csproj", "{F86DAF20-DE32-4D0B-8345-4DFAD8E96719}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "套接字接收器", "..\套接字接收器\套接字接收器.csproj", "{AC430BB5-A4DD-4A3B-89FF-9F9F7F3E70D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{F86DAF20-DE32-4D0B-8345-4DFAD8E96719}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F86DAF20-DE32-4D0B-8345-4DFAD8E96719}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F86DAF20-DE32-4D0B-8345-4DFAD8E96719}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC430BB5-A4DD-4A3B-89FF-9F9F7F3E70D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC430BB5-A4DD-4A3B-89FF-9F9F7F3E70D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC430BB5-A4DD-4A3B-89FF-9F9F7F3E70D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC430BB5-A4DD-4A3B-89FF-9F9F7F3E70D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
